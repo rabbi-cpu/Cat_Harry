@@ -15,8 +15,6 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieParser());
-
-// MongoDB ক্লায়েন্ট ইনিশিয়ালাইজেশন
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri, {
   serverApi: {

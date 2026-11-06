@@ -52,9 +52,7 @@ async function run() {
       res.send({ status: 'StudioSpace Server & Database are running smoothly! 🚀' });
     });
 
-    // ============================================
     // 🔐 JWT Authentication Routes
-    // ============================================
 
     // টোকেন তৈরি করা (Login এর সময়)
     app.post('/api/jwt', async (req, res) => {

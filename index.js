@@ -48,8 +48,6 @@ async function run() {
     const db = client.db(process.env.DB_NAME || 'studiospace_db');
     const studiosCollection = db.collection('studios');
     const bookingsCollection = db.collection('bookings');
-
-    // টেস্ট রুট
     app.get('/', (req, res) => {
       res.send({ status: 'StudioSpace Server & Database are running smoothly! 🚀' });
     });

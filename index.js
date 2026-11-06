@@ -52,9 +52,6 @@ async function run() {
       res.send({ status: 'StudioSpace Server & Database are running smoothly! 🚀' });
     });
 
-    // 🔐 JWT Authentication Routes
-
-    // টোকেন তৈরি করা (Login এর সময়)
     app.post('/api/jwt', async (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET || 'studiospace_secret_key', {

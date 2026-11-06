@@ -66,8 +66,6 @@ async function run() {
         })
         .send({ success: true, token });
     });
-
-    // টোকেন ক্লিয়ার করা (Logout এর সময়)
     app.post('/api/logout', async (req, res) => {
       res
         .clearCookie('token', {

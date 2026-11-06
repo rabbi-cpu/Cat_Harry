@@ -7,8 +7,6 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-
-// মিডলওয়্যার কনফিগারেশন
 app.use(cors({
   origin: [
     process.env.CLIENT_URL || 'http://localhost:3000'
@@ -27,8 +25,6 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
-
-// JWT অথেন্টিকেশন ভেরিফাই মিডলওয়্যার
 const verifyToken = (req, res, next) => {
   const token = req.cookies?.token || req.headers?.authorization?.split(' ')[1];
 

@@ -76,11 +76,7 @@ async function run() {
         .send({ success: true, message: 'Logged out successfully' });
     });
 
-    // ============================================
-    // 🎬 Studio Management APIs
-    // ============================================
-
-    // প্রাথমিক ডামি ডেটা সিড করার API রুট
+  
     app.get('/api/seed-studios', async (req, res) => {
       try {
         await studiosCollection.deleteMany({});
